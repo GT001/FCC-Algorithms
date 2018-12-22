@@ -1,5 +1,5 @@
-# FCC Algorithms and Data Structures Projects 
-plus solutions to some of the curriculum exercises
+# Free Code Camp Javascript Certification Projects 
+# with solutions to some of the curriculum exercises
 
 1. Palindrome Checker
 2. Roman Numeral Convertor 
