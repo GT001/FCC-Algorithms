@@ -186,7 +186,18 @@ function convertToRoman(num) {
 	}
 
 	function checkCashRegister(price, cash, cid) {
-
+		/**
+		 * Design a cash register drawer function checkCashRegister() that accepts purchase price as the first 
+		 * argument (price), payment as the second argument (cash), and cash-in-drawer (cid) as the third argument.
+		 * cid is a 2D array listing available currency.
+		 * The checkCashRegister() function should always return an object with a status key and a change key.
+		 * Return {status: "INSUFFICIENT_FUNDS", change: []} if cash-in-drawer is less than the change due, or if 
+		 * you cannot return the exact change.
+		 * Return {status: "CLOSED", change: [...]} with cash-in-drawer as the value for the key change if it is 
+		 * equal to the change due. 
+		 * Otherwise, return {status: "OPEN", change: [...]}, with the change due in coins and bills, sorted in 
+		 * highest to lowest order, as the value of the change key.
+		 */
 		let change = Math.round(100*(cash - price))/100;
 		let cashInDrawer = Math.round(100*(check(cid)))/100;
 
@@ -283,7 +294,22 @@ function convertToRoman(num) {
 checkCashRegister(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]])
 
 function telephoneCheck(str) {
-
+/**Return true if the passed string looks like a valid US phone number.
+ * The user may fill out the form field any way they choose as long as it 
+ * has the format of a valid US number. The following are examples of valid 
+ * formats for US numbers (refer to the tests below for other variants):
+ * 555-555-5555
+ * (555)555-5555
+ * (555) 555-5555
+ * 555 555 5555
+ * 5555555555
+ * 1 555 555 5555
+ * 
+ * For this challenge you will be presented with a string such as 800-692-7753 or 8oo-six427676;laskdjf. 
+ * Your job is to validate or reject the US phone number based on any combination of the formats provided 
+ * above. The area code is required. If the country code is provided, you must confirm that the country code is 1. 
+ * Return true if the string is a valid US phone number; otherwise return false.
+ *  */
   let expr = new RegExp(
     /^(1\s?)?((\(\d{3}\))|(\d{3}))[\s\-]?\d{3}[\s\-]?\d{4}$/);
 
