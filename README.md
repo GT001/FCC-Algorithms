@@ -1,5 +1,5 @@
 # Free Code Camp Javascript Certification Projects 
-# with solutions to some of the curriculum exercises
+with solutions to some of the curriculum exercises
 
 1. Palindrome Checker
 2. Roman Numeral Convertor 
